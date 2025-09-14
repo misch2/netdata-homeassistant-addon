@@ -24,6 +24,8 @@ options:
   dbengine_disk_space: 256
   enable_alarm: true
   enable_log: true
+  stream_api_key: changeme-api-key
+  stream_hostname: netdata.local
   claim_url: https://app.netdata.cloud
   claim_token: xxxxxxxxxxxxxxxxxxxxxxx
   claim_rooms:
@@ -34,6 +36,8 @@ schema:
   dbengine_disk_space: int
   enable_alarm: bool
   enable_log: bool
+  stream_api_key: str
+  stream_hostname: str
   claim_url: str
   claim_token: str
   claim_rooms:

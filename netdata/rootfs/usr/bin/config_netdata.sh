@@ -36,3 +36,11 @@ then
     sed -i "s/${TAB}# error log = .*/${TAB}error log = none/" /etc/netdata/netdata.conf
     sed -i "s/${TAB}# access log = .*/${TAB}access log = none/" /etc/netdata/netdata.conf
 fi
+
+NETDATA_API_KEY=$(bashio::config 'stream_api_key')
+bashio::log.info "Netdata configuration: set stream API key to ${NETDATA_API_KEY}"
+sed -i "s/#api key = FOOBAR.*/api key = ${NETDATA_API_KEY}/" /etc/netdata/stream.conf
+
+NETDATA_STREAM_HOSTNAME=$(bashio::config 'stream_hostname')
+bashio::log.info "Netdata configuration: set stream hostname to ${NETDATA_STREAM_HOSTNAME}"
+sed -i "s/#destination = STREAM_DESTINATION.*/destination = ${NETDATA_STREAM_HOSTNAME}/" /etc/netdata/stream.conf
