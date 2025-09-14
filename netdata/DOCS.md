@@ -5,6 +5,8 @@
 - **dbengine_disk_space**: give a max size of the database. This is optionnal and the default value should be enough. If you want to optimize the performance you can check the [Netdata documentation](https://learn.netdata.cloud/docs/store/change-metrics-storage#calculate-the-system-resources-ram-disk-space-needed-to-store-metrics)
 - **enable_alarm**: enable the thresholds alarm
 - **enable_log**: enable the logs
+- **stream_api_key**: API key for streaming
+- **stream_hostname**: streaming destination
 
 ## Cloud Netdata configuration
 
